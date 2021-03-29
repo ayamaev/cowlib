@@ -172,15 +172,15 @@
 
 -type pseudo_headers() :: #{} %% Trailers
 	| #{ %% Responses.
-		status := cow_http:status()
+		status => cow_http:status()
 	} | #{ %% Normal CONNECT requests.
-		method := binary(),
-		authority := binary()
+		method => binary(),
+		authority => binary()
 	} | #{ %% Other requests and extended CONNECT requests.
-		method := binary(),
-		scheme := binary(),
-		authority := binary(),
-		path := binary(),
+		method => binary(),
+		scheme => binary(),
+		authority => binary(),
+		path => binary(),
 		protocol => binary()
 	}.
 

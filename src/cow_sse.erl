@@ -32,9 +32,9 @@
 -export_type([state/0]).
 
 -type parsed_event() :: #{
-	last_event_id := binary(),
-	event_type := binary(),
-	data := iolist()
+	last_event_id => binary(),
+	event_type => binary(),
+	data => iolist()
 }.
 
 -type event() :: #{

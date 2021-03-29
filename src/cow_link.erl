@@ -24,9 +24,9 @@
 -include("cow_parse.hrl").
 
 -type link() :: #{
-	target := binary(),
-	rel := binary(),
-	attributes := [{binary(), binary()}]
+	target => binary(),
+	rel => binary(),
+	attributes => [{binary(), binary()}]
 }.
 -export_type([link/0]).
 
@@ -356,9 +356,9 @@ resolve_test_() ->
 %% Build a link header.
 
 -spec link([#{
-	target := binary(),
-	rel := binary(),
-	attributes := [{binary(), binary()}]
+	target => binary(),
+	rel => binary(),
+	attributes => [{binary(), binary()}]
 }]) -> iodata().
 link(Links) ->
 	lists:join(<<", ">>, [do_link(Link) || Link <- Links]).
